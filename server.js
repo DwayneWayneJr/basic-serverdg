@@ -1,8 +1,9 @@
 'use strict';
 const express = require('express');
 const app = express();
-const PORT = 3000;
+require('dotenv').config();
+const PORT = process.env.PORT || 3000;
 
 app.use(express.static('./public'));
 
-app.listen(PORT, () => console.log`app is up on ${PORT}`);
+app.listen(PORT, () => console.log(`app is up on ${PORT}`));
